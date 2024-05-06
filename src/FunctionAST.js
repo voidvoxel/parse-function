@@ -27,6 +27,20 @@ class FunctionAST {
     }
 
 
+    addArgument (...args) {
+        for (let arg of args) {
+            if (typeof arg !== 'string') {
+                throw new TypeError(
+                    `Expected \`args\` to contain values of type 'string' `
+                        + `but instead received value of type '${typeof arg}'.`
+                    );
+            }
+
+            this.#arguments.push(arg);
+        }
+    }
+
+
     getArguments () {
         return structuredClone(this.#arguments);
     }
