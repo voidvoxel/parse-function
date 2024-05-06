@@ -1,6 +1,11 @@
 const parseFunction = require("..");
 
 
+function exp (x) {
+    return Math.exp(x);
+}
+
+
 function add (x, y) {
     return x + y;
 }
@@ -14,7 +19,7 @@ function helloWorld () {
 test(
     "parse a function without arguments",
     () => {
-        const ast = parseFunction(helloWorld);
+        const ast = parseFunction.ast(helloWorld);
 
         expect(ast.getName()).toBe('helloWorld');
         expect(ast.getArguments().length).toBe(0);
@@ -24,9 +29,35 @@ test(
 
 
 test(
-    "parse a function with arguments",
+    "parse a function with one argument",
     () => {
-        const ast = parseFunction(add);
+        const ast = parseFunction.ast(exp);
+
+        const expectedArgs = [ 'x' ];
+
+        expect(ast.getName()).toBe('exp');
+
+        expect(
+            JSON.stringify(
+                ast.getArguments()
+            )
+        ).toBe(
+            JSON.stringify(
+                expectedArgs
+            )
+        );
+
+        expect(ast.getBody()).toBe(`return Math.exp(x);`);
+
+        expect(ast.toFunction()(420)).toBe(Math.exp(420));
+    }
+);
+
+
+test(
+    "parse a function with multiple arguments",
+    () => {
+        const ast = parseFunction.ast(add);
 
         const expectedArgs = [ 'x', 'y' ];
 
