@@ -1,12 +1,12 @@
 {
   "name": "@voidvoxel/parse-function",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
       "name": "@voidvoxel/parse-function",
-      "version": "0.3.2",
+      "version": "0.4.0",
       "license": "MPL-2.0",
       "dependencies": {
         "jest": "^29.7.0",
