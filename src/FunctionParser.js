@@ -5,7 +5,7 @@ const {
 
 
 const FunctionAST = require("./FunctionAST");
-const grammar = require("../dist/grammar");
+const grammar = require("./grammar");
 
 
 class FunctionParser {

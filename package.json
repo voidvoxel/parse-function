@@ -4,7 +4,7 @@
   "description": "Get the body of a JavaScript function's source code as a string",
   "main": "src/index.js",
   "scripts": {
-    "build": "nearleyc src/grammar.ne -o dist/grammar.js",
+    "build": "nearleyc src/grammar/function.ne -o src/grammar/index.js",
     "prepublish": "npm run build",
     "test": "jest"
   },
