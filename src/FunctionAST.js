@@ -20,10 +20,10 @@ class FunctionAST {
         body,
         ...args
     ) {
-        this.#name = name;
-        this.#body = body;
+        this.#name = name.trim();
+        this.#body = body.trim();
 
-        this.#arguments = structuredClone(args);
+        this.#arguments = args.map(arg => arg.trim());
     }
 
 
