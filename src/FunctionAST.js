@@ -56,6 +56,11 @@ class FunctionAST {
     }
 
 
+    removeAllArguments () {
+        this.#arguments = [];
+    }
+
+
     setBody (body) {
         if (typeof body !== 'string') {
             throw new TypeError(
