@@ -22,7 +22,8 @@ class FunctionAST {
     ) {
         this.#name = name;
         this.#body = body;
-        this.#arguments = args;
+
+        this.#arguments = structuredClone(args);
     }
 
 
@@ -38,6 +39,29 @@ class FunctionAST {
 
     getName () {
         return this.#name;
+    }
+
+
+    toFunction () {
+        const args = this.getArguments();
+
+        if (args.length > 0) {
+            return new Function(
+                ...args,
+                this.getBody()
+            );
+        } else {
+            return new Function(
+                this.getBody()
+            );
+        }
+    }
+
+
+    toString () {
+        return `function ${this.getName()} `
+            + `(${this.getArguments().join(',')}) `
+            + `{ ${this.getBody()} }`;
     }
 }
 

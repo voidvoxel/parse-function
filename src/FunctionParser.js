@@ -4,6 +4,7 @@ const {
 } = require('nearley');
 
 
+const FunctionAST = require("./FunctionAST");
 const grammar = require("./grammar");
 
 
@@ -23,7 +24,17 @@ class FunctionParser {
 
         parser.feed(sourceCode);
 
-        return parser.results[0];
+        const {
+            name,
+            args,
+            body
+        } = parser.results[0];
+
+        return new FunctionAST(
+            name,
+            body,
+            ...args
+        );
     }
 }
 
