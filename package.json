@@ -20,6 +20,6 @@
   "license": "MPL-2.0",
   "dependencies": {
     "jest": "^29.7.0",
-    "nearley": "^2.20.1"
+    "nearley": "github:voidvoxel/nearley@hotfix/648-xss-vulnerability-fix"
   }
 }
