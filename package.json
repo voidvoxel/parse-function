@@ -4,7 +4,7 @@
   "description": "Get the body of a JavaScript function's source code as a string",
   "main": "src/index.js",
   "scripts": {
-    "build": "nearleyc src/grammar.ne -o src/grammar.js",
+    "build": "node node_modules/.bin/nearleyc src/grammar.ne -o src/grammar.js",
     "preinstall": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,7 +18,7 @@
   ],
   "author": "Ashlynne Juniper",
   "license": "MPL-2.0",
-  "devDependencies": {
+  "dependencies": {
     "nearley": "^2.20.1"
   }
 }
