@@ -61,6 +61,11 @@ class FunctionAST {
     }
 
 
+    setArguments (...args) {
+        this.#arguments = structuredClone(args);
+    }
+
+
     setBody (body) {
         if (typeof body !== 'string') {
             throw new TypeError(
