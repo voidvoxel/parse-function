@@ -85,9 +85,8 @@ var grammar = {
         }
         },
     {"name": "FunctionArguments$ebnf$1$subexpression$1", "symbols": ["Identifier", "_", {"literal":","}, "_"]},
-    {"name": "FunctionArguments$ebnf$1", "symbols": ["FunctionArguments$ebnf$1$subexpression$1"]},
-    {"name": "FunctionArguments$ebnf$1$subexpression$2", "symbols": ["Identifier", "_", {"literal":","}, "_"]},
-    {"name": "FunctionArguments$ebnf$1", "symbols": ["FunctionArguments$ebnf$1", "FunctionArguments$ebnf$1$subexpression$2"], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
+    {"name": "FunctionArguments$ebnf$1", "symbols": ["FunctionArguments$ebnf$1$subexpression$1"], "postprocess": id},
+    {"name": "FunctionArguments$ebnf$1", "symbols": [], "postprocess": function(d) {return null;}},
     {"name": "FunctionArguments", "symbols": ["FunctionArguments$ebnf$1", "Identifier"], "postprocess": 
         (tokens) => tokens
             .flat(Infinity)

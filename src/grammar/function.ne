@@ -71,7 +71,7 @@ Function ->
 
 
 FunctionArguments ->
-    (Identifier _ "," _):+ Identifier
+    (Identifier _ "," _):? Identifier
 {%
     (tokens) => tokens
         .flat(Infinity)
