@@ -127,4 +127,4 @@ dist
 .pnp.*
 
 # Nearley
-src/grammar.js
+dist/grammar.js
