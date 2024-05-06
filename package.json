@@ -1,6 +1,6 @@
 {
   "name": "@voidvoxel/parse-function",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Get the body of a JavaScript function's source code as a string",
   "main": "src/index.js",
   "scripts": {
