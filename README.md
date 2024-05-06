@@ -17,6 +17,13 @@ import parseFunction from "@voidvoxel/parse-function";
 const parseFunction = require("@voidvoxel/parse-function");
 
 
+// Parse a function from a string.
+const add = parseFunction(`function add (x, y) { return x + y; }`);
+
+// Call the parsed function.
+console.log(add(400, 20));
+
+
 // Create a function to parse.
 function helloWorld () {
     console.log("Hello, world!");
@@ -27,7 +34,7 @@ function helloWorld () {
 helloWorld();
 
 // Parse the function.
-const ast = parseFunction(helloWorld);
+const ast = parseFunction.ast(helloWorld);
 
 // Evaluate the body of the function to run the code directly.
 // Normally, `eval` is a security risk, but it's okay to use for testing
