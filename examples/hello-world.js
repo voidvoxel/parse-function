@@ -7,4 +7,6 @@ function helloWorld () {
 
 const ast = parseFunction(helloWorld);
 
+console.log(`Evaluating the body of function \`${ast.name}\`...`);
+
 eval(ast.body);
