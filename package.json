@@ -4,8 +4,8 @@
   "description": "Get the body of a JavaScript function's source code as a string",
   "main": "src/index.js",
   "scripts": {
-    "build": "node node_modules/.bin/nearleyc src/grammar.ne -o src/grammar.js",
-    "preinstall": "npm run build",
+    "build": "nearleyc src/grammar.ne -o dist/grammar.js",
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
