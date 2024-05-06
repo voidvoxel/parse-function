@@ -24,11 +24,15 @@ class FunctionParser {
 
         parser.feed(sourceCode);
 
-        const {
+        let {
             name,
             args,
             body
         } = parser.results[0];
+
+        name ??= 'anonymous';
+        args ??= [];
+        body ??= '';
 
         return new FunctionAST(
             name,
