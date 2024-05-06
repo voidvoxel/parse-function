@@ -1,5 +1,7 @@
 # `@voidvoxel/parse-function`
 
+[![Known Vulnerabilities](https://snyk.io/test/github/voidvoxel/parse-function/badge.svg)](https://snyk.io/test/github/voidvoxel/parse-function)
+
 Get the body of a JavaScript function's source code as a string.
 
 ## Installation
