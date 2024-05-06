@@ -1,12 +1,12 @@
 {
   "name": "@voidvoxel/parse-function",
-  "version": "0.5.4-alpha",
+  "version": "0.5.4",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
       "name": "@voidvoxel/parse-function",
-      "version": "0.5.4-alpha",
+      "version": "0.5.4",
       "license": "MPL-2.0",
       "dependencies": {
         "nearley": "git://github.com/voidvoxel/nearley#hotfix/648-xss-vulnerability-fix"
