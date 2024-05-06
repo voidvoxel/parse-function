@@ -7,6 +7,14 @@ function helloWorld () {
 
 const ast = parseFunction(helloWorld);
 
-console.log(`Evaluating the body of function \`${ast.name}\`...`);
+console.log(`Evaluating the body of function \`${ast.getName()}\`...`);
 
-eval(ast.body);
+eval(ast.getBody());
+
+console.log(`${ast}`);
+
+const f = ast.toFunction();
+
+f();
+
+console.log(`${f}`);
