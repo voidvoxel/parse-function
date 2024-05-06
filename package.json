@@ -1,0 +1,24 @@
+{
+  "name": "@voidvoxel/parse-function",
+  "version": "0.0.0",
+  "description": "Get the body of a JavaScript function's source code as a string",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "nearleyc src/grammar.ne -o src/grammar.js",
+    "preinstall": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "parser",
+    "functions",
+    "javascript",
+    "ecmascript",
+    "js",
+    "es6"
+  ],
+  "author": "Ashlynne Juniper",
+  "license": "MPL-2.0",
+  "dependencies": {
+    "nearley": "^2.20.1"
+  }
+}
