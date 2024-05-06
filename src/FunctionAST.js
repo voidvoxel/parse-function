@@ -42,6 +42,30 @@ class FunctionAST {
     }
 
 
+    setBody (body) {
+        if (typeof body !== 'string') {
+            throw new TypeError(
+                `Expected \`body\` to be of type 'string' `
+                    + `but instead received value of type '${typeof body}'.`
+                );
+        }
+
+        this.#body = body;
+    }
+
+
+    setName (name) {
+        if (typeof name !== 'string') {
+            throw new TypeError(
+                `Expected \`name\` to be of type 'string' `
+                    + `but instead received value of type '${typeof name}'.`
+                );
+        }
+
+        this.#name = name;
+    }
+
+
     toFunction () {
         const args = this.getArguments();
 
