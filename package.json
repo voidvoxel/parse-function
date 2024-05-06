@@ -5,7 +5,6 @@
   "main": "src/index.js",
   "scripts": {
     "build": "nearleyc src/grammar/function.ne -o src/grammar/index.js",
-    "prepublish": "npm run build",
     "test": "jest"
   },
   "keywords": [
@@ -19,7 +18,9 @@
   "author": "Ashlynne Juniper",
   "license": "MPL-2.0",
   "dependencies": {
-    "jest": "^29.7.0",
-    "nearley": "github:voidvoxel/nearley@hotfix/648-xss-vulnerability-fix"
+    "nearley": "git://github.com/voidvoxel/nearley#hotfix/648-xss-vulnerability-fix"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
